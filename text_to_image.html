@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMMERSIVEX.AI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles for the integrated header */
+        .header {
+            background-color: black;
+            padding: 20px;
+            display: flex;
+            justify-content: center; /* Center align navigation links */
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center; /* Center align content */
+        }
+
+        .nav {
+            display: flex;
+            gap: 20px;
+            align-items: center; /* Vertically align items */
+        }
+
+        .nav a {
+            text-decoration: none;
+            text-decoration: solid;
+            font-weight: 900;
+            color: white;
+            font-weight: bold;
+            padding: 10px; /* Added padding to make clickable area larger */
+        }
+
+        /* Additional styles to adjust existing layout */
+        body {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: black; /* Updated background color */
+            color: gray;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center; /* Center align text */
+        }
+
+        label {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: aqua; /* Updated label color */
+        }
+
+        input {
+            max-width: 350px;
+            width: 90%;
+            height: 30px;
+            border-radius: 20px;
+            background: #323232;
+            padding: 5px;
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
+        }
+
+        img {
+            width: 90%;
+            max-width: 350px;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+
+        /* CSS for Button */
+        .button-85 {
+            padding: 0.6em 2em;
+            border: none;
+            outline: none;
+            color: rgb(255, 255, 255);
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .button-85:before {
+            content: "";
+            background: linear-gradient(
+                45deg,
+                #ff0000,
+                #ff7300,
+                #fffb00,
+                #48ff00,
+                #00ffd5,
+                #002bff,
+                #7a00ff,
+                #ff00c8,
+                #ff0000
+            );
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            -webkit-filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing-button-85 20s linear infinite;
+            transition: opacity 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing-button-85 {
+            0% {
+                background-position: 0 0;
+            }
+            50% {
+                background-position: 400% 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .button-85:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #222;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <a href="index.php">Home</a>
+           
+            <a href="#">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <h1> IMMERSIVE X</h1>
+        <label for="input">Create an Image From Text Prompt:</label>
+        <input type="text" id="input">
+        <button class="button-85" id="btn">Generate</button>
+        <img id="Image" src="" alt="">
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>
